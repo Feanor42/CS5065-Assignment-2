@@ -67,11 +67,13 @@ def delete_date(date):
     return ('', 204)
 
 def validate_date(date_text):
+    if type(date_text) is not str:
+        raise ApiError("Incorrect data type.", 400)
     try:
         if date_text != datetime.datetime.strptime(date_text, r'%Y%m%d').strftime(r'%Y%m%d'):
             raise ValueError
     except ValueError:
-        raise ApiError("Incorrect data format, should be YYYYMMDD.", 400)
+        raise ApiError("Incorrect date format, should be YYYYMMDD.", 400)
 
 # Start flask server when calling on the file
 if __name__ == '__main__':
