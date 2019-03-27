@@ -18,19 +18,19 @@ def handle_api_error(error):
     response.status_code = error.status_code
     return response
 
-@app.route('/historical', methods=['GET'])
+@app.route('/api/historical', methods=['GET'])
 def historical():
     dates = weather.get_historical()
     date_dict_array = [{'DATE':date} for date in dates]
     return jsonify(date_dict_array), 200
 
-@app.route('/historical/<date>', methods=['GET'])
+@app.route('/api/historical/<date>', methods=['GET'])
 def get_date(date):
     validate_date(date)
     date_info = weather.get_date(date)
     return jsonify(date_info), 200
 
-@app.route('/historical', methods=['POST'])
+@app.route('/api/historical', methods=['POST'])
 def add_date():
     content = request.get_json()
     if 'DATE' not in content or 'TMAX' not in content or 'TMIN' not in content:
@@ -54,13 +54,13 @@ def add_date():
     date = weather.add_date(date_text, tmax, tmin)
     return jsonify({'DATE':date['DATE']}), 201
 
-@app.route('/forecast/<start_date>', methods=['GET'])
+@app.route('/api/forecast/<start_date>', methods=['GET'])
 def get_forecast(start_date):
     validate_date(start_date)
     forecast = weather.get_forecast(start_date)
     return jsonify(forecast), 200
 
-@app.route('/historical/<date>', methods=['DELETE'])
+@app.route('/api/historical/<date>', methods=['DELETE'])
 def delete_date(date):
     validate_date(date)
     weather.delete_date(date)
