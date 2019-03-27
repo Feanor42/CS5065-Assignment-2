@@ -12,7 +12,7 @@ Gets a list of all dates where weather information is available.
 
 **Permissions required** : None
 
-## Success Response
+### Success Response
 
 **Code** : `200 OK`
 
