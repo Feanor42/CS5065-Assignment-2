@@ -42,6 +42,7 @@ DATE - **string**
 - **YYYYMMDD**
 
 TMAX - **float**
+
 TMIN - **float**
 
 **Data example** All fields must be sent.
