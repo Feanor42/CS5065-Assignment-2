@@ -9,10 +9,10 @@ This application is built using Python. In order to run the application, it is n
    * Install Python 3.7, Pip, Virtualenv
 2. Navigate to source directory
 3. Do Pip installations
-   - Start virtualenv
-     - `virtualenv env`
-     - `env/Scripts/activate`
-   - `pip install -r requirements.txt`
+   * Start virtualenv
+     * `virtualenv env`
+     * `env/Scripts/activate`
+   * `pip install -r requirements.txt`
 
 ## Usage
 
