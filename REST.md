@@ -28,6 +28,41 @@ Gets a list of all dates where weather information is available.
 ]
 ```
 
+## Get historical weather data by date
+
+Gets the weather data for one day.
+
+**URL** : `/api/historical/<date>`
+
+**Method** : `GET`
+
+### Success Response
+
+**Code** : `200 OK`
+
+**Content examples**
+
+```json
+{
+    "DATE": "20180601",
+    "TMAX": 89.1,
+    "TMIN": 51.3
+}
+```
+### Error Responses
+
+**Condition** : If date is wrong format.
+
+**Code** : `400 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "message": "Incorrect date format, should be YYYYMMDD."
+}
+```
+
 ## Add weather data
 
 Add weather data. If weather data does not exists it creates new weather data. If weather data does exists, it overwrites the existing weather data.
