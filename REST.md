@@ -38,11 +38,11 @@ Add weather data. If weather data does not exists it creates new weather data. I
 
 **Data parameters**
 
-DATE=[string]
-- format=[YYYYMMDD]
+DATE - **string**
+- **YYYYMMDD**
 
-TMAX=[float]
-TMIN=[float]
+TMAX - **float**
+TMIN - **float**
 
 **Data example** All fields must be sent.
 
