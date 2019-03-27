@@ -4,14 +4,14 @@ This application is a restful webservice that hosts weather data for Cincinnati.
 
 ## Installation
 
-The backend is built using python. In order to run the backend, it is necessary to follow the following steps.
-1. Do proper environment installations
-  * Python 3.7, Pip, virualenv
-2. Navigate to source
+This application is built using Python. In order to run the application, it is necessary to follow the following steps.
+1. Setup environment
+  * Install Python 3.7, Pip, Virtualenv
+2. Navigate to source directory
 3. Do Pip installations
   * Start virtualenv
     * `virtualenv env`
-    * `venv/Scripts/activate`
+    * `env/Scripts/activate`
   * `pip install -r requirements.txt`
 
 ## Usage
