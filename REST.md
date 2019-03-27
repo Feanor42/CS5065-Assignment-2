@@ -2,8 +2,7 @@
 
 ## Get historical weather data
 
-Get the details of the currently Authenticated User along with basic
-subscription information.
+Gets a list of all dates where weather information is available.
 
 **URL** : `/api/historical/`
 
@@ -29,11 +28,6 @@ subscription information.
     },
     {
         "DATE": "20130103"
-    },
-    ...
+    }
+]
 ```
-
-## Notes
-
-* If the User does not have a `UserInfo` instance when requested then one will
-  be created for them.
