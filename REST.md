@@ -28,7 +28,7 @@ Gets a list of all dates where weather information is available.
 ]
 ```
 
-# Add weather data
+## Add weather data
 
 Add weather data. If weather data does not exists it creates new weather data. If weather data does exists, it overwrites the existing weather data.
 
@@ -40,6 +40,7 @@ Add weather data. If weather data does not exists it creates new weather data. I
 
 DATE=[string]
 - format=[YYYYMMDD]
+
 TMAX=[float]
 TMIN=[float]
 
@@ -47,13 +48,13 @@ TMIN=[float]
 
 ```json
 {
-	"DATE":"20180601",
-	"TMAX":50,
-	"TMIN":34.1
+    "DATE":"20180601",
+    "TMAX":50,
+    "TMIN":34.1
 }
 ```
 
-## Success Response
+### Success Response
 
 **Code** : `201 CREATED`
 
@@ -65,7 +66,7 @@ TMIN=[float]
 }
 ```
 
-## Error Responses
+### Error Responses
 
 **Condition** : If fields are missed.
 
